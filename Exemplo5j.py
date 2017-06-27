@@ -6,7 +6,7 @@ import pyodbc
 import pandas.io.sql as psql
 import matplotlib.pyplot as plt
 
-cnxn = pyodbc.connect('DRIVER={Sql Server};SERVER=***;DATABASE=siacnet;UID=***;PWD=***') 
+cnxn = pyodbc.connect('DRIVER={Sql Server};SERVER=***;DATABASE=***;UID=***;PWD=***') 
 cursor = cnxn.cursor()
 sql = ("""select distinct(codrealizacao) as qtdrealizacoes, mesanocompetencia from historicorealizacoescliente""")
 
@@ -20,18 +20,3 @@ qtd.plot(kind='barh', figsize=(20,5), grid=True, rot=0, color='blue', legend=Fal
 plt.title('Quantidade de atendimetos por mês em 2017')
 plt.xlabel('Quantidade de atendimentos')
 plt.show()
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-df.head()
-
-
-# In[ ]:
-
-
-
