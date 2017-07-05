@@ -6,9 +6,10 @@ import pymssql
 import pandas.io.sql as psql
 import matplotlib.pyplot as plt
 import configuraion as conf
+import querys
 
 cnxn = pymssql.connect(host=conf.host,database=conf.daabase,user=conf.user,password=condf.password)
-sql = "***"
+sql = querys.sql1
 df = pd.read_sql(sql, cnxn)
 cnxn.close()
 
