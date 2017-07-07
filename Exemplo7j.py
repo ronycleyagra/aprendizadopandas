@@ -5,15 +5,15 @@ import pandas as pd
 import pymssql
 import pandas.io.sql as psql
 import matplotlib.pyplot as plt
+import configuraion as conf
+import querys
 
-cnxn = pymssql.connect(host='***',database='***',user='***',password='***')
-sql = "***"
+cnxn = pymssql.connect(host=conf.host,database=conf.daabase,user=conf.user,password=condf.password)
+sql = querys.sql1
 df = pd.read_sql(sql, cnxn)
 cnxn.close()
 
-
 #qtd1 = df['mesanocompetencia'].value_counts()
-
 
 #graph = pd.crosstab(index=df['mesanocompetencia'],columns=df['instrumento']).apply(lambda r: r/r.sum() *100,axis=1)
 graph = pd.crosstab(df['mesanocompetencia'],df['instrumento'])
