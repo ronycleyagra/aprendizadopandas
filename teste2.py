@@ -5,7 +5,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+'''Gera uma série de datas
+'''
 ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
 
 ts = ts.cumsum()
