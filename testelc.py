@@ -1,6 +1,6 @@
 '''
 
-Teste de list comprehension
+Teste básico de list comprehension
 '''
 
 nums = [1,2,3,4,5]
